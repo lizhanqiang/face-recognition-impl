@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.56.101:3306/facerecognition
+    username: root
+    password: root
+facerecognition:
+  thrift:
+    server:
+      host: 192.168.56.101
+      port: 5050
+
+
