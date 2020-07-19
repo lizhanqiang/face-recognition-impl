@@ -1,0 +1,63 @@
+<page-header [home]="''" [autoBreadcrumb]="false"></page-header>
+
+
+<div class="face-padding-box">
+  <nz-card [nzBordered]="false">
+
+    <form method="post" nz-form  [formGroup]="faceForm" (ngSubmit)="formQuery()">
+      <div nz-row>
+        <div nz-col nzSpan="5">
+          <nz-form-item>
+            <nz-form-label nzFor="name">名字</nz-form-label>
+            <nz-form-control>
+              <input nz-input formControlName="name" id="name" placeholder="请输入名字"/>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+        <div nz-col nzSpan="1"></div>
+        <div nz-col nzSpan="5">
+          <button nz-button type="submit" nzType="primary" (click)="formQuery()">查询</button>
+          <button nz-button type="reset" nzType="default" (click)="reset()">重置</button>
+        </div>
+        <div nz-col nzSpan="1"></div>
+        <div nz-col nzSpan="5">
+          <button style="height: 30px;margin-bottom: 5px" [routerLink]="['/face/faceadd']" nz-button nzType="primary">
+            <i nz-icon nzType="plus"></i>
+            <span>添加人脸</span>
+          </button>
+        </div>
+      </div>
+    </form>
+
+
+    <nz-table
+        #facelistTbl
+        [nzData]="facelist"
+        [nzTotal]="totalRecord"
+        [(nzPageSize)]="pageSize"
+        [(nzPageIndex)]="pageIndex"
+        [nzShowTotal]="totalTemplate"
+        [nzShowQuickJumper]="true"
+        (nzPageIndexChange)="queryFaceList()"
+        [nzFrontPagination]="false">
+      <thead>
+      <th>名字</th>
+      <th>图像</th>
+      <th>操作</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let face of facelistTbl.data">
+        <td>{{face.name}}</td>
+        <td><nz-avatar nzText="User" nzSrc="data:image/jpeg;base64,{{face.image}}"></nz-avatar></td>
+        <td>
+          <a nz-popconfirm nzTitle="确定要删除吗?" nzOkText="删除" nzCancelText="取消" (nzOnConfirm)="deleteFace(face.id)">删除</a>
+        </td>
+      </tr>
+      </tbody>
+    </nz-table>
+    <div style="float: right;margin-top: 8px">
+      <ng-template #totalTemplate let-total> 共有 {{ totalRecord }} 条记录 </ng-template>
+    </div>
+
+  </nz-card>
+</div>

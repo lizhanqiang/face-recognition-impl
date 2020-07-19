@@ -12,39 +12,45 @@
         <i nz-icon nzType="menu-{{ settings.layout.collapsed ? 'unfold' : 'fold' }}"></i>
       </div>
     </li>
-    <!-- Github Page -->
+
+
+    <!--&lt;!&ndash; Github Page &ndash;&gt;
     <li>
       <a class="alain-default__nav-item" href="//github.com/ng-alain/ng-alain" target="_blank">
         <i nz-icon nzType="github"></i>
       </a>
     </li>
-    <!-- Lock Page -->
+    &lt;!&ndash; Lock Page &ndash;&gt;
     <li class="hidden-mobile">
       <div class="alain-default__nav-item" [routerLink]="['/lock']">
         <i nz-icon nzType="lock"></i>
       </div>
     </li>
-    <!-- Search Button -->
+    &lt;!&ndash; Search Button &ndash;&gt;
     <li class="hidden-pc" (click)="searchToggleChange()">
       <div class="alain-default__nav-item">
         <i nz-icon nzType="search"></i>
       </div>
-    </li>
+    </li>-->
+
+
   </ul>
+<!--
   <header-search class="alain-default__search" [toggleChange]="searchToggleStatus"></header-search>
+-->
   <ul class="alain-default__nav">
-    <!-- Notify -->
+    <!--&lt;!&ndash; Notify &ndash;&gt;
     <li>
       <header-notify></header-notify>
     </li>
-    <!-- Task -->
+    &lt;!&ndash; Task &ndash;&gt;
     <li class="hidden-mobile">
       <header-task></header-task>
     </li>
-    <!-- App Icons -->
+    &lt;!&ndash; App Icons &ndash;&gt;
     <li class="hidden-mobile">
       <header-icon></header-icon>
-    </li>
+    </li>-->
     <!-- Settings -->
     <li class="hidden-mobile">
       <div class="alain-default__nav-item" nz-dropdown [nzDropdownMenu]="settingsMenu" nzTrigger="click" nzPlacement="bottomRight">
@@ -55,14 +61,14 @@
           <div nz-menu-item>
             <header-fullscreen></header-fullscreen>
           </div>
-          <div nz-menu-item>
+          <!--<div nz-menu-item>
             <header-storage></header-storage>
-          </div>
+          </div>-->
         </div>
       </nz-dropdown-menu>
     </li>
-    <li class="hidden-mobile">
+    <!--<li class="hidden-mobile">
       <header-user></header-user>
-    </li>
+    </li>-->
   </ul>
 </div>

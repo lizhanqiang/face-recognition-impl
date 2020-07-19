@@ -1,0 +1,31 @@
+<page-header [home]="''" [autoBreadcrumb]="false" [title]="'添加人脸'"></page-header>
+
+<div class="face-padding-box">
+  <nz-card [nzBordered]="false">
+    <form nz-form [formGroup]="faceForm" (ngSubmit)="formSubmit()">
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name" >名字</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24">
+          <input style="width: 150px" nz-input formControlName="name" id="name" placeholder="请输入名字"/>
+        </nz-form-control>
+      </nz-form-item>
+
+
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="image" >图像</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24">
+          <input type="file"  id="image" (change)="onFaceImageChange($event)"/>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control [nzSpan]="14" [nzOffset]="6">
+          <button nz-button type="submit" nzType="primary" [disabled]="faceForm.invalid">提交</button>
+          <button nz-button type="reset" nzType="default" (click)="resetForm()">重置</button>
+        </nz-form-control>
+      </nz-form-item>
+
+    </form>
+  </nz-card>
+</div>

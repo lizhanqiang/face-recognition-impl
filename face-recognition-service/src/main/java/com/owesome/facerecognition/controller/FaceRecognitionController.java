@@ -11,13 +11,7 @@ import com.owesome.facerecognition.utils.PagingResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.Base64Utils;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -27,7 +21,8 @@ import java.util.List;
  * face recognition api service
  */
 @Controller
-@RequestMapping(value = "/face", produces = "application/json")
+@RequestMapping(value = "/api/v1/face", produces = "application/json")
+@CrossOrigin(value = "*",allowCredentials = "true")
 class FaceRecognitionController {
 
     @Autowired
@@ -45,9 +40,9 @@ class FaceRecognitionController {
      */
     @PostMapping("/list")
     @ResponseBody
-    HttpResponse queryFaceListByCondition(@RequestParam("pageIndex") Integer pageIndex,
-                                          @RequestParam("pageSize") Integer pageSize,
-                                          @RequestBody FaceFeatureRepoEntity faceEntity){
+    HttpResponse queryFaceListByCondition(@RequestBody FaceFeatureRepoEntity faceEntity,
+                                          @RequestParam("pageIndex") Integer pageIndex,
+                                          @RequestParam("pageSize") Integer pageSize){
 
         Integer offset = (pageIndex - 1) * pageSize;
         List<FaceFeatureRepoEntity> faces = faceRecognitionMapper.queryFaceListByCondition(faceEntity,pageSize, offset);

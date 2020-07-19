@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9445669a-db6a-4d88-9c14-c3f8a3adce3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../face-recognition-web/src/assets/face_recognition/facelist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../face-recognition-web/src/assets/face_recognition/facerec.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/owesome/facerecognition/controller/FaceRecognitionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/owesome/facerecognition/controller/FaceRecognitionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../face-recognition-web/e2e/src/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../face-recognition-web/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../face-recognition-web/src/app/core/startup/startup.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../face-recognition-web/src/app/core/startup/startup.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../face-recognition-web/src/app/layout/default/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../face-recognition-web/src/app/layout/default/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../face-recognition-web/src/app/layout/default/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../face-recognition-web/src/app/layout/default/sidebar/sidebar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../face-recognition-web/src/app/routes/routes-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../face-recognition-web/src/app/routes/routes-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../face-recognition-web/src/styles/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/../face-recognition-web/src/styles/index.less" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +46,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../face-recognition-web" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RebelAgentSelection">
@@ -77,7 +85,8 @@
       <updated>1594818911017</updated>
       <workItem from="1594818915928" duration="1400000" />
       <workItem from="1594897348492" duration="4039000" />
-      <workItem from="1594911238860" duration="436000" />
+      <workItem from="1594911238860" duration="3725000" />
+      <workItem from="1595123171149" duration="3524000" />
     </task>
     <servers />
   </component>
@@ -89,7 +98,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

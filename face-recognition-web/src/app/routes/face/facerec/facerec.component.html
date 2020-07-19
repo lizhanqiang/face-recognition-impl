@@ -1,0 +1,35 @@
+<page-header [home]="''" [autoBreadcrumb]="false"></page-header>
+
+<div class="face-padding-box">
+
+  <nz-upload
+    nzType="drag"
+    nzAction="{{face_recognition_endpoint}}"
+    [nzMultiple]="false"
+    [nzShowUploadList]="false"
+    [nzLimit]="1"
+    [nzAccept]="'.png, .jpg, .jpeg'"
+    [nzName]="'image'"
+    (nzChange)="handlerUploadChange($event)"
+  >
+    <p class="ant-upload-drag-icon">
+      <i nz-icon nzType="inbox"></i>
+    </p>
+    <p class="ant-upload-text">点击或拖拽文件到此区域以上传</p>
+    <p class="ant-upload-hint">
+      支持点击上传和拖拽上传，只能上传一张图片
+    </p>
+  </nz-upload>
+
+  <nz-divider nzText="华丽的分割线"></nz-divider>
+
+  <nz-row>
+    <nz-col [nzSpan]="12" style="text-align: right">
+      <canvas id="imagecanvas" width="600" height="600"></canvas>
+    </nz-col>
+    <nz-col [nzSpan]="12" style="text-align: left">
+      <textarea *ngIf="faceRecResult!=null" style="width: 80%;text-align: left;" rows="18" nz-input [(ngModel)]="faceRecResult" readonly></textarea>
+    </nz-col>
+  </nz-row>
+</div>
+

@@ -59,7 +59,7 @@ export class StartupService {
       resolve(null);
     });
   }
-  
+
   private viaMock(resolve: any, reject: any) {
     // const tokenData = this.tokenService.get();
     // if (!tokenData.token) {
@@ -69,8 +69,8 @@ export class StartupService {
     // }
     // mock
     const app: any = {
-      name: `ng-alain`,
-      description: `Ng-zorro admin panel front-end framework`
+      name: `人脸识别系统`,
+      description: `使用face_recognition、spring boot、ng-alain实现的人脸识别系统`
     };
     const user: any = {
       name: 'Admin',
@@ -87,18 +87,20 @@ export class StartupService {
     // Menu data, https://ng-alain.com/theme/menu
     this.menuService.add([
       {
-        text: 'Main',
-        group: true,
-        children: [
+        text:'',
+        group:true,
+        hideInBreadcrumb:true,
+        hide:false,
+        children:[
           {
-            text: 'Dashboard',
-            link: '/dashboard',
-            icon: { type: 'icon', value: 'appstore' }
+            text: '人脸列表',
+            link: '/face/facelist',
+            icon: { type: 'img', value: 'assets/face_recognition/facelist.png' }
           },
           {
-            text: 'Quick Menu',
-            icon: { type: 'icon', value: 'rocket' },
-            shortcutRoot: true
+            text: '人脸比对',
+            link: '/face/facerec',
+            icon: { type: 'img', value: 'assets/face_recognition/facerec.png' },
           }
         ]
       }
