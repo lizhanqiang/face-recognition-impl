@@ -4,6 +4,7 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
+        echo 'checkout source code'
         git 'https://github.com/lizhanqiang/face-recognition-impl.git'
       }
     }
