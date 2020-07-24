@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('checkout') {
+      steps {
+        git 'https://github.com/lizhanqiang/face-recognition-impl.git'
+      }
+    }
+    stage('build_face_recognition_service') {
+      steps {
+          echo 'face_recognition_service'
+      }
+    }
+  }
+}
