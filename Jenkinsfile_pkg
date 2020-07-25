@@ -11,8 +11,9 @@ pipeline {
     stage('build_face_recognition_service') {
       steps {
           echo 'package face_recognition_service'
-          sh 'cd face-recognition-service/'
-          sh 'mvn clean package -Dmaven.test.skip=true'
+          dir('face-recognition-service'){
+            sh 'mvn clean package -Dmaven.test.skip=true'
+          }
       }
     }
   }
