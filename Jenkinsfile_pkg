@@ -21,7 +21,6 @@ pipeline {
       steps {
         echo 'package face-recognition-web'
         dir('face-recognition-web') {
-          sh 'npm install'
           sh 'npm run build'
         }
       }
