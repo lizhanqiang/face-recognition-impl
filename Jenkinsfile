@@ -16,14 +16,5 @@ pipeline {
           }
       }
     }
-
-    stage('build_face_recognition_web') {
-      steps {
-        echo 'package face-recognition-web'
-        dir('face-recognition-web') {
-          sh 'npm run build'
-        }
-      }
-    }
   }
 }
