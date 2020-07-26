@@ -1,5 +1,6 @@
 #!/usr/bin/sh
 
+export BUILD_ID=dontKillMe
 
 ps aux | grep face-recognition-service | grep -v grep | awk '{print $2}' | xargs kill -9
 
