@@ -12,7 +12,8 @@ pipeline {
       steps {
         dir('face-recognition-service') {
           sh 'mvn clean package -Dmaven.test.skip=true'
-          sh 'start.sh'
+          sh 'chmod a+x ./start.sh'
+          sh './start.sh'
         }
       }
     }
