@@ -11,7 +11,7 @@ pipeline {
     stage('build_face_recognition_service') {
       steps {
         echo 'killing face-recognition-service......'
-        sh "ps aux | grep face-recognition-service | grep -v grep | awk '{print $2}' | xargs kill -9"
+        sh "ps aux | grep face-recognition-service | grep -v grep | awk '{print \$2}' | xargs kill -9"
         dir('face-recognition-service') {
           sh 'mvn clean package -Dmaven.test.skip=true'
         }
